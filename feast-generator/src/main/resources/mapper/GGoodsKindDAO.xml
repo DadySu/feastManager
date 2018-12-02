@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.up.feast.mapper.GGoodsKindDAO">
+  <resultMap id="BaseResultMap" type="com.up.feast.model.GGoodsKind">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="typed" jdbcType="TINYINT" property="typed" />
+    <result column="merchant_id" jdbcType="BIGINT" property="merchantId" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+
+    <!--商品相关字段-->
+    <result column="goodsId" jdbcType="BIGINT" property="goodsId" />
+    <result column="goodsName" jdbcType="VARCHAR" property="goodsName" />
+    <result column="price" jdbcType="DECIMAL" property="price" />
+    <result column="oldPrice" jdbcType="DECIMAL" property="oldPrice" />
+    <result column="sellCount" jdbcType="SMALLINT" property="sellCount" />
+    <result column="rating" jdbcType="SMALLINT" property="rating" />
+    <result column="info" jdbcType="VARCHAR" property="info" />
+    <result column="description" jdbcType="VARCHAR" property="description" />
+    <result column="good_kind_id" jdbcType="BIGINT" property="goodKindId" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType ="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    g.id, g.name, typed, merchant_id, g.update_time, g.create_time,t.name goodsName,price,t.id goodsId, oldPrice,description,
+    sellCount, rating, info, good_kind_id
+  </sql>
+  <select id="selectByMerchantId" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from g_goods_kind g left join
+    g_good t on g.id = t.good_kind_id
+    where g.merchant_id = #{merchantId,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from g_goods_kind
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="GGoodsKind" useGeneratedKeys="true">
+    insert into g_goods_kind (`name`, typed, merchant_id, 
+      update_time, create_time)
+    values (#{name,jdbcType=VARCHAR}, #{typed,jdbcType=TINYINT}, #{merchantId,jdbcType=BIGINT}, 
+      #{updateTime,jdbcType=TIMESTAMP}, #{createTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="GGoodsKind" useGeneratedKeys="true">
+    insert into g_goods_kind
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="name != null">
+        `name`,
+      </if>
+      <if test="typed != null">
+        typed,
+      </if>
+      <if test="merchantId != null">
+        merchant_id,
+      </if>
+      <if test="updateTime != null">
+        update_time,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="typed != null">
+        #{typed,jdbcType=TINYINT},
+      </if>
+      <if test="merchantId != null">
+        #{merchantId,jdbcType=BIGINT},
+      </if>
+      <if test="updateTime != null">
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="GGoodsKind">
+    update g_goods_kind
+    <set>
+      <if test="name != null">
+        `name` = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="typed != null">
+        typed = #{typed,jdbcType=TINYINT},
+      </if>
+      <if test="merchantId != null">
+        merchant_id = #{merchantId,jdbcType=BIGINT},
+      </if>
+      <if test="updateTime != null">
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="GGoodsKind">
+    update g_goods_kind
+    set `name` = #{name,jdbcType=VARCHAR},
+      typed = #{typed,jdbcType=TINYINT},
+      merchant_id = #{merchantId,jdbcType=BIGINT},
+      update_time = #{updateTime,jdbcType=TIMESTAMP},
+      create_time = #{createTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>
