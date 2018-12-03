@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 /**
- * 启动类1
+ * 启动类
  *
  * @author liub
  * @date 2018/11/28
