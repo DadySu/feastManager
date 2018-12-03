@@ -5,10 +5,10 @@ import org.apache.ibatis.annotations.Param;
 import java.util.List;
 
 /**
- * @Description:
- * @Author mengfanzhu
- * @Date 3/19/18 17:24
- * @Version 1.0
+ * @description:
+ * @author liub
+ * @date 2018/12/2 12:33
+ * @version 1.0
  */
 public  interface BaseMapper<T, PK> {
 

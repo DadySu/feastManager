@@ -10,10 +10,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import javax.servlet.http.HttpServletRequest;
 
 /**
- * @Description: 统一错误异常处理
- * @Author mengfanzhu
- * @Date 8/10/17 17:21
- * @Version 1.0
+ * @description: 统一错误异常处理
+ * @author liub
+ * @date 2018/12/2 12:33
+ * @version 1.0
  */
 @ControllerAdvice
 @ResponseBody   // 返回json

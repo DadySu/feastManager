@@ -86,16 +86,8 @@ public class ResultBody {
 		}
 	}
 
-	/** 
-     * @Title: ResultBody
-     * @Description: 分页使用 
-     * @param result
-     * @param isPage 是否分页
-     * @return 
-     * @author mengfanzhu
-     * @throws 
-     */
-    @SuppressWarnings("unchecked")
+
+	@SuppressWarnings("unchecked")
 	public ResultBody(Object result,Boolean isPage) {
     	if(isPage){
     		if(result instanceof List){

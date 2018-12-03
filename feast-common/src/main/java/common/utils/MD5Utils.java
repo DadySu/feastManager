@@ -8,10 +8,10 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 /**
- * @Description:
- * @Author mengfanzhu
- * @Date 8/21/17 17:03
- * @Version 1.0
+ * @description:
+ * @author liub
+ * @date 2018/12/2 12:33
+ * @version 1.0
  */
 public class MD5Utils {
 

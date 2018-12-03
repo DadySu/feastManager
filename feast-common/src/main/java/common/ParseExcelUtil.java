@@ -18,17 +18,7 @@ import java.util.*;
 @Slf4j
 public class ParseExcelUtil {
 
-    /**
-     * excel 转换为  List<entityClass>
-     *  @param unReadField (可不读的列名)
-     *  @param file MultipartFile
-     *  @param entityClass (转换后对象T.class)
-     *  @param fieldMap (列名对应属性名 map)
-     *  @param titleRow 表头所在行(下标从0开始)
-     *  @return
-     *  @throws Exception 
-     * @author mengfanzhu
-     */
+
     public static <T> List<T> excelToList(String unReadField, MultipartFile file, Class<T> entityClass, Map<String, String> fieldMap,
                                           int titleRow) throws Exception {
 

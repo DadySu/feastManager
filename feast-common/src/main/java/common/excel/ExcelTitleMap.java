@@ -1,11 +1,11 @@
 package common.excel;
 
 /**
-* @ClassName: AccountExcelTitleMap 
-* @Description: TODO
-* @author mengfanzhu
-* @date 2016年11月4日 下午6:47:36 
-*/
+ /**
+ * @author liub
+ * @date 2018/12/2 12:33
+ * @version 1.0
+ */
 public class ExcelTitleMap {
 
 

@@ -8,10 +8,10 @@ import lombok.Setter;
 import java.util.Map;
 
 /**
- * @Description: api criteria
- * @Author mengfanzhu
- * @Date 8/10/17 16:13
- * @Version 1.0
+ * @description: api criteria
+ * @author liub
+ * @date 2018/12/2 12:33
+ * @version 1.0
  */
 @Getter
 @Setter

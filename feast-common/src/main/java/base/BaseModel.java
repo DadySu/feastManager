@@ -6,10 +6,10 @@ import java.io.Serializable;
 import java.sql.Timestamp;
 
 /**
- * @Description:
- * @Author mengfanzhu
- * @Date 3/19/18 17:22
- * @Version 1.0
+ * @description:
+ * @author liub
+ * @date 2018/12/2 12:33
+ * @version 1.0
  */
 @Getter
 @Setter

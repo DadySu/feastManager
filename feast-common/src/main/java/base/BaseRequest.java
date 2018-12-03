@@ -7,7 +7,9 @@ import lombok.Setter;
 import javax.validation.constraints.NotEmpty;
 
 /**
- * Created by songpingping on 2017/8/31.
+ * @author liub
+ * @date 2018/12/2 12:33
+ * @version 1.0
  */
 
 @Setter

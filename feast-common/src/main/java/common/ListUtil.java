@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @Description:
- * @Author mengfanzhu
- * @Date 4/7/18 11:16
- * @Version 1.0
+ * @description:
+ * @author liub
+ * @date 2018/12/2 12:33
+ * @version 1.0
  */
 public class ListUtil {
     /**

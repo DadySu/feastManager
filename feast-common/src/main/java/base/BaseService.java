@@ -10,10 +10,10 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @Description:
- * @Author mengfanzhu
- * @Date 3/19/18 17:27
- * @Version 1.0
+ * @description:
+ * @author liub
+ * @date 2018/12/2 12:33
+ * @version 1.0
  */
 public abstract class BaseService<T> {
 

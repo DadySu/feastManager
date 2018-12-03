@@ -4,8 +4,9 @@ import org.apache.commons.lang3.StringUtils;
 
 /**
  * 项目中string使用工具类
- * @author songpingping
- *         Created on 2018/3/17.
+ * @author liub
+ * @date 2018/12/2 12:33
+ * @version 1.0
  */
 public class PrStringUtils {
 

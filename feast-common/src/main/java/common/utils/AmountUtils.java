@@ -7,10 +7,10 @@ import java.math.BigDecimal;
 import java.text.DecimalFormat;
 
 /**
- * @Description:
- * @Author mengfanzhu
- * @Date 3/21/18 11:10
- * @Version 1.0
+ * @description:
+ * @author liub
+ * @date 2018/12/2 12:33
+ * @version 1.0
  */
 @Slf4j
 public class AmountUtils {
