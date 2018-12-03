@@ -10,9 +10,6 @@ import javax.xml.bind.DatatypeConverter;
 import java.security.Key;
 import java.util.Map;
 
-/**
- * Created by songpingping on 2017/8/28.
- */
 @Slf4j
 public class JavaWebToken {
 

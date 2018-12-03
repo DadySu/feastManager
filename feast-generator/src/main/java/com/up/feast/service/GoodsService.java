@@ -42,7 +42,6 @@ public class GoodsService {
             }
         });
 
-
         JSONObject allGoods = new JSONObject();
         JSONArray allGoodsArray = new JSONArray();
         map.forEach((key,value)->{
@@ -57,6 +56,7 @@ public class GoodsService {
                 JSONObject goods = new JSONObject();
                 goods.put("id",gGoodsKind.getGoodsId());
                 goods.put("name",gGoodsKind.getGoodsName());
+                goods.put("goodKindId", gGoodsKind.getGoodKindId());
                 goods.put("price",gGoodsKind.getPrice());
                 goods.put("oldPrice",gGoodsKind.getOldPrice());
                 goods.put("description",gGoodsKind.getDescription());

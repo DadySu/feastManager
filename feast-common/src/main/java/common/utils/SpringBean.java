@@ -7,10 +7,10 @@ import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 
 /**
- * @Description:
- * @Author mengfanzhu
- * @Date 8/2/18 12:33
- * @Version 1.0
+ * @description:
+ * @author liub
+ * @date 2018/12/2 12:33
+ * @version 1.0
  */
 public class SpringBean implements ServletContextListener {
 

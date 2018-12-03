@@ -7,9 +7,9 @@ import lombok.NoArgsConstructor;
 
 /**
  * @Description: 应用统一错误异常
- * @Author mengfanzhu
- * @Date 8/10/17 16:33
- * @Version 1.0
+ * @author liub
+ * @date 2018/12/2 12:33
+ * @version 1.0
  */
 @Getter
 @NoArgsConstructor

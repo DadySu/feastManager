@@ -20,7 +20,9 @@ import java.util.UUID;
 
 /**
  * CommonUtils 工具类
- * Created by songpingping on 2017/9/1.
+ * @author liub
+ * @date 2018/12/2 12:33
+ * @version 1.0
  */
 @Slf4j
 public class CommonUtils {

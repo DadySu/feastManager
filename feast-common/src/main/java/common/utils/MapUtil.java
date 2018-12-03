@@ -11,23 +11,13 @@ import java.util.List;
 import java.util.Map;
 
 
-/** 
-* @ClassName: MapUtil 
-* @Description: map 工具类
-* @author mengfanzhu
-* @date Aug 16, 2017 10:50:55 AM 
-*/
+/**
+ * @author liub
+ * @version 1.0
+ * @date 2018/12/2 12:33
+ */
 public class MapUtil {
-	/**
-	 * @Title: MapUtil
-	 * @Description: map 转 object
-	 * @param map
-	 * @param beanClass
-	 * @return
-	 * @throws Exception
-	 * @author mengfanzhu
-	 * @throws
-	 */
+
 	public static Object mapToObject(Map<String, Object> map, Class<?> beanClass) throws Exception {
 		if (map == null) { return null; }
 		Object obj = beanClass.newInstance();

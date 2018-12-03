@@ -6,9 +6,9 @@ import java.util.UUID;
 
 /**
  * @Description: UUID
- * @Author mengfanzhu
- * @Date 8/21/17 16:58
- * @Version 1.0
+ * @author liub
+ * @date 2018/12/2 12:33
+ * @version 1.0
  */
 @NoArgsConstructor
 public class UUIDGenerator {

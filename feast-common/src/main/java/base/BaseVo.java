@@ -6,10 +6,10 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 /**
- * @Description:
- * @Author mengfanzhu
- * @Date 9/27/17 16:48
- * @Version 1.0
+ * @description:
+ * @author liub
+ * @date 2018/12/2 12:33
+ * @version 1.0
  */
 @Getter
 @Setter
