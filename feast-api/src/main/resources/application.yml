@@ -2,10 +2,8 @@ spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     username: root
-    password: iamno1123Chen1013.
-    url: jdbc:mysql://39.105.146.160/feast?characterEncoding=utf-8&useSSL=false
-    #password: 123456
-    #url: jdbc:mysql://127.0.0.1/feast?characterEncoding=utf-8&useSSL=false
+    password: 123456
+    url: jdbc:mysql://127.0.0.1/feast?characterEncoding=utf-8&useSSL=false
   jpa:
     show-sql: true
   jackson:
