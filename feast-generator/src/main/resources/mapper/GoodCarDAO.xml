@@ -276,4 +276,12 @@
       price = #{price,jdbcType=DECIMAL}
     where id = #{id,jdbcType=BIGINT}
   </update>
+
+
+    <select id="selectByUserIdAndMerchantId" parameterType="GoodCar" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from g_good_car
+        where user_id = #{userId,jdbcType=BIGINT} and merchant_id = #{merchantId,jdbcType=BIGINT}
+    </select>
 </mapper>
