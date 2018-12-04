@@ -10,10 +10,7 @@ import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 
@@ -32,18 +29,17 @@ public class GoodsController extends BaseController {
     @Resource
     private GoodsHandler goodsHandler;
 
-    @GetMapping("/goods/queryGoodsById/{merchantId}")
+    @GetMapping("/goods/queryGoodsById")
     @ApiOperation("根据商户id查询商品信息")
     @ApiParam(value = "merchantId")
-    public String queryGoodsByKindId(@PathVariable String merchantId){
+    public String queryGoodsByKindId(@RequestParam String merchantId){
         log.info("查询商品详情的参数 {}",merchantId);
         String response = goodsService.selectByMerchantId(merchantId);
         log.info("查询商品详情返回的结果 {}", response);
         return response;
     }
 
-    @GetMapping("/goods/addShoppingCar")
-
+    @PostMapping("/goods/addShoppingCar")
     @ApiImplicitParam(value = GoodsCarRequest.ADD_SHOPPING_CAR)
     public BaseResponse addShoppingCar(@RequestParam String requestBody) {
         log.info("添加购物车的参数 {}", requestBody);
