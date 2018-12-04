@@ -66,7 +66,7 @@ public class GoodCar implements Serializable {
      * 数量
      */
     @ApiModelProperty(value = "该商品数量")
-    private Short amount;
+    private Integer amount;
 
     /**
      * 价格

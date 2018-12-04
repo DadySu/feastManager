@@ -4,6 +4,8 @@ import com.up.feast.model.GoodCar;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 /**
  * GoodCarDAO继承基类
  *
@@ -15,4 +17,5 @@ import org.springframework.stereotype.Component;
 public interface GoodCarDAO extends MyBatisBaseDao<GoodCar, Long> {
 
 
+    List<GoodCar> selectByUserIdAndMerchantId(GoodCar goodCar);
 }
