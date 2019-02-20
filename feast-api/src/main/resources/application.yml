@@ -1,3 +1,4 @@
+
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
@@ -9,7 +10,7 @@ spring:
   jackson:
     default-property-inclusion: non_null
   #redis:
-    #host: 39.105.146.160
+    #host:
     #port: 6379
 
 management:
@@ -21,3 +22,15 @@ management:
 mybatis:
   mapper-locations: classpath:mapper/*.xml
   type-aliases-package: com.up.feast.model
+
+tom:
+  age: ${random.int}
+server:
+  port: 8080
+
+logging:
+  config: classpath:logback-spring.xml
+  level:
+    dao: debug
+    org:
+      mybatis: debug

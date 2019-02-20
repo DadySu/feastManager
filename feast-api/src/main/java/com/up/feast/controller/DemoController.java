@@ -1,11 +1,13 @@
 package com.up.feast.controller;
 
 import base.BaseResponse;
+import com.up.feast.annotation.TestAnnotation;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -29,5 +31,11 @@ public class DemoController {
 
         BaseResponse response = BaseResponse.newInstanceSuccess("成功");
         return response.toString();
+    }
+
+    @GetMapping("/test")
+    @TestAnnotation(address = "shenyang", condition = TestAnnotation.age.kid)
+    public String test() {
+        return "原来你是我最想留住的幸运，原来我们的爱情曾经靠的那么近...";
     }
 }
