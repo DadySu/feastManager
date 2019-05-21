@@ -36,6 +36,8 @@ public class DemoController {
     @GetMapping("/test")
     @TestAnnotation(address = "shenyang", condition = TestAnnotation.age.kid)
     public String test() {
-        return "原来你是我最想留住的幸运，原来我们的爱情曾经靠的那么近...";
+        log.info("info log");
+        log.debug("debug log");
+        return "test";
     }
 }
